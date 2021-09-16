@@ -1,0 +1,62 @@
+/*SCSS Style Sheet for WDV341 homework page*/
+
+
+body {
+	background-color:white;
+}
+
+h1, h2 {
+	color:#404040;
+	text-align: center;
+	line-height:175%;
+	font-family: Impact, Charcoal, sans-serif;
+	font-family: 'Cinzel', serif;
+}
+
+a {
+	color:blue;
+}
+
+a:hover {
+	color:green;
+}
+a:active {
+	color:red;
+}
+
+nav {
+	color:red;
+	background-color:black;
+}
+
+nav li {
+	color:red;
+	display:inline;
+	padding-right:0%;
+}
+
+nav a {
+	color:red;
+	text-decoration:none;
+}
+
+nav a:hover {
+	background-color:gray;
+	padding:0%;
+	padding-bottom:0%;
+}
+
+.leftcolumn {
+	width: 25%;
+	float: left;
+}
+
+.main {
+	width: 25%;
+	float: left;
+}
+
+.rightcolumn {
+	width: 50%;
+	float: right;
+}

@@ -1,0 +1,7 @@
+Steps for creating a gi repo
+
+1. Create remote repo on Github
+2. create a folder on your local machine
+3. Use GitBash in that folder "git init"
+4. Connect to remote 
+   git remote add origin URL/Github/user/folder.git

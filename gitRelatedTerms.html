@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Git Related Terms</title>
+
+    <style>
+      body {
+        background-color: wheat;
+      }
+      h1,
+      h2,
+      p {
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      }
+      p {
+        font-size: large;
+      }
+      em {
+        background-color: rgb(219, 219, 219);
+        padding: 0.15%;
+        border-radius: 4%;
+        font-family: "Courier New", Courier, monospace;
+        font-style: normal;
+      }
+      .paraMargin {
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>WDV341 - Intro PHP</h1>
+    <h2>Git Related Terms</h2>
+
+    <p class="paraMargin"><strong>Version Control Software</strong></p>
+    <p>
+      It's a practice that helps track and manage changes to software code. It
+      tracks any modification to the code within a database. If any mistake is
+      made, the developer can turn around and compare older copies of code to
+      newer copies to try to fix those mistakes.
+    </p>
+
+    <p class="paraMargin"><strong>Add</strong></p>
+    <p>
+      This Git command adds all of the files (new and modified) in the current
+      directory to the index, getting them ready for the next
+      <em>git commit</em>.
+    </p>
+
+    <p class="paraMargin"><strong>Commit</strong></p>
+    <p>
+      <em>git commit</em> is used to save your changes in the code to the local
+      repository
+    </p>
+
+    <p class="paraMargin"><strong>Push</strong></p>
+    <p>
+      <em>git push</em> is used to upload local repository files to a remote
+      repository. Pushing is how you transfer commits from your local repo to
+      your remote repo.
+    </p>
+
+    <p class="paraMargin"><strong>Pull</strong></p>
+    <p>
+      <em>git pull</em> is essentially a combination of <em>git fetch</em> and
+      <em>git merge</em>. <em>git fetch</em> updates all the remote tracking
+      branches in a local repo, while <em>git merge</em> merges the
+      corresponding remote tracking branch to the local working branch.
+    </p>
+
+    <p class="paraMargin"><strong>Clone</strong></p>
+    <p>
+      <em>git clone</em> is used to create a copy of a specific repository or
+      branch within a repository. From what I've read, cloning a repository is
+      typically only done once, at the beginning of the porject you're working
+      on, and isn't usually cloned again.
+    </p>
+  </body>
+</html>
