@@ -6,16 +6,16 @@
         block comment
     */
 
-    //define some PHP variables
+    //define some PHP variables 
 
     $firstName = "Jude";
     $lastName = "Bissoon";
 
-    //$fmt = numfmt_create( 'us_US', NumberFormatter::CURRENCY);
-    //$formattedSales = numfmt_format_currency($fmt, $totalSales, "USD"). "/n";
-    //echo numfmt_format_currency($fmt, 1234567.891234567890000, "EUR). "/n"
+    //$fmt = numfmt_create( 'us_US', NumberFormatter::CURRENCY );
+    //$formattedSales = numfmt_format_currency($fmt, $totalSales, "USD")."\n";
+    //echo numfmt_format_currency($fmt, 1234567.891234567890000, "EUR")."\n";
 
-    function processSalesPerson() {
+    function processSalesPerson(){
         //code goes here
         global $firstName, $lastName;        //allows access to global variables
 
@@ -23,12 +23,14 @@
         return $salesName;
     }
 
-    $totalSales = 123.45;
+    //processSalesPerson();     //calls the function!
+
+    $totalSales = 1235.45;
 
     echo "<h1>$firstName</h1>";     //pay attention to the variable within the quotes
 
-?>
 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,12 +40,12 @@
     <title>Document</title>
 </head>
 <body>
-
     <h1>WDV341 Intro PHP</h1>
     <h2>PHP Syntax examples</h2>
+
+    <h3>Salesperson: <?php echo processSalesPerson(); ?></h3>
+    <h3>Salesperson: <?php echo $firstName . " " .  $lastName ?></h3>
+    <p>Total Sales from today: <?php echo $formattedSales ?></p>
     
-    <h3>Salesperson: <?php echo processSalesPerson </h3>
-    <h3>Salesperson: <?php echo $firstName . " " . $lastName ?> </h3>
-    <p>Total Sales from today: <?php echo "$" . $totalSales ?> </p>
 </body>
 </html>
