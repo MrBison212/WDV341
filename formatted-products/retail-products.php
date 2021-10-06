@@ -1,3 +1,26 @@
+<?php
+
+    // Get data from a database
+    //     connect to database href
+    //     SQL - Select to get data from database
+    //     prepare the statment  
+    //     bind the parameters
+    //     execute the statement  (run it!)
+
+    //     use a fetch to pull the data from the  statement/result object into PHP assoc array pull the data fields from teh array like $row["product_name"]
+
+    //     place the new 'data' in an HTMl area to display     echo $...
+    //     do this for each pience of data in the record
+
+    //     If this works then we will do this for all the rows
+    //         use a foreach loop to access each row to build the object
+
+
+
+
+
+?>
+
 <!doctype html>
 <html>
 
