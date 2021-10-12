@@ -19,7 +19,7 @@
 
     */
 
-    include '../dbConnect.php';
+    include '../Unit_6/dbConnect.php';
 
     try{
         $sql = "SELECT product_name,product_description,product_price,product_image,product_status,product_inStock FROM wdv341_products;";
@@ -29,7 +29,9 @@
         
         $result = $stmt->fetch(PDO::FETCH_ASSOC); //$result is an ARRAY
 
-        //echo "<h1>" . $result['product_name'] . "</h1>";
+        $productObj = new stdClass();           //creates generic PHP object
+        $productObj->product_name = $result['product_name'];
+
 
 
     }
