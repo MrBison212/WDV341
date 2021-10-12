@@ -19,7 +19,7 @@
 
     */
 
-    include '../dbConnect.php';
+    include '../Unit-6/lesson 3/dbConnect.php';
 
     try{
         $sql = "SELECT product_name,product_description,product_price,product_image,product_status,product_inStock FROM wdv341_products;";

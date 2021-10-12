@@ -19,7 +19,7 @@
 
     */
 
-    include '../Unit_6/dbConnect.php';
+    include '../Unit-6/lesson 3/dbConnect.php';
 
     try{
         $sql = "SELECT product_name,product_description,product_price,product_image,product_status,product_inStock FROM wdv341_products;";
@@ -30,7 +30,29 @@
         $result = $stmt->fetch(PDO::FETCH_ASSOC); //$result is an ARRAY
 
         $productObj = new stdClass();           //creates generic PHP object
-        $productObj->product_name = $result['product_name'];
+        $productObj->product_name = $result['product_name'];        //add property to object
+        $productObj->product_description = $result['product_description'];
+        $productObj->product_price = $result['product_price'];
+        $productObj->product_image = $result['product_image'];
+        $productObj->product_status = $result['product_status'];
+        $productObj->product_inStock = $result['product_inStock'];
+
+        echo $productObj->product_name;
+
+        $productObj = json_encode($productObj);       //convert PHP object into JSON object
+
+        echo $productJSON;
+
+
+        foreach ($stmt->fetch(PDO::FETCH_ASSOC) as result) {
+            $productObj = new stdClass();           //creates generic PHP object
+            $productObj->product_name = $result['product_name'];        //add property to object
+            $productObj->product_description = $result['product_description'];
+            $productObj->product_price = $result['product_price'];
+            $productObj->product_image = $result['product_image'];
+            $productObj->product_status = $result['product_status'];
+            $productObj->product_inStock = $result['product_inStock'];
+        }
 
 
 
