@@ -1,26 +1,46 @@
 <?php
 
-    // Get data from a database
-    //     connect to database href
-    //     SQL - Select to get data from database
-    //     prepare the statment  
-    //     bind the parameters
-    //     execute the statement  (run it!)
+    /*
+    Get data from a database
+        -connect to database
+        -SQL - Select to get data from database
+        -prepare the statement
+           bind the parameters
+        -execute the statement  (run it!)
 
-    //     use a fetch to pull the data from the  statement/result object into PHP assoc array pull the data fields from teh array like $row["product_name"]
+        -use a fetch to pull the data from the statement/result object into PHP assoc array
+        pull the data fields from the array like $row["product_name"]
 
-    //     place the new 'data' in an HTMl area to display     echo $...
-    //     do this for each pience of data in the record
+        -place the new 'data' into an HTML area to display    echo $...
+        do this for each piece of data in the record 
 
-    //     If this works then we will do this for all the rows
-    //         use a foreach loop to access each row to build the object
+        If this works then we will do this for all rows
+            use a foreach loop to access each row to build the output
 
+    */
+
+    include '../dbConnect.php';
+
+    try{
+        $sql = "SELECT product_name,product_description,product_price,product_image,product_status,product_inStock FROM wdv341_products;";
+
+        $stmt = $conn->prepare($sql);       //prepared statement
+        $stmt->execute();
+        
+        $result = $stmt->fetch(PDO::FETCH_ASSOC); //$result is an ARRAY
+
+        //echo "<h1>" . $result['product_name'] . "</h1>";
+
+
+    }
+    catch(PDOException $e){
+        echo "Errors: " . $e->getMessage();
+    }
 
 
 
 
 ?>
-
 <!doctype html>
 <html>
 
@@ -57,6 +77,53 @@
             <p class="productStatus">New Item!</p>            
             <p class="productInventory"># In Stock!</p>
         </div>
+
+        <div class="productBlock">
+            <div class="productImage">
+                <image src="productImages/<?php echo $result['product_image']; ?>">
+            </div>
+            <p class="productName"><?php echo $result['product_name']; ?></p>
+            <p class="productDesc"><?php echo $result['product_description'];?></p>
+            <p class="productPrice">$<?php echo $result['product_price'];?></p>
+            <!-- The productStatus element should only be displayed if there is product_status data in the record -->
+            <?php
+                if( $result['product_status'] != "" ){
+                ?>
+                    <p class="productStatus">New Item!</p>
+                <?php
+                    //display the element on the page with the status information
+                }
+            ?>       
+            <p class="productInventory"><?php echo $result['product_inStock']; ?> In Stock!</p>
+        </div>
+
+        <?php 
+            foreach($stmt->fetchAll(PDO::FETCH_ASSOC) as $result){
+        ?>
+            <div class="productBlock">
+                <div class="productImage">
+                    <image src="productImages/<?php echo $result['product_image']; ?>">
+                </div>
+                <p class="productName"><?php echo $result['product_name']; ?></p>
+                <p class="productDesc"><?php echo $result['product_description'];?></p>
+                <p class="productPrice">$<?php echo $result['product_price'];?></p>
+                <!-- The productStatus element should only be displayed if there is product_status data in the record -->
+                <?php
+                    if( $result['product_status'] != "" ){
+                    ?>
+                        <p class="productStatus"><?php echo $result['product_status']; ?></p>
+                    <?php
+                        //display the element on the page with the status information
+                    }
+                ?>       
+                <p class="productInventory"><?php echo $result['product_inStock']; ?> In Stock!</p>
+            </div>
+        <?php
+            }// end of foreach()
+        ?>
+
+
+
     </section>
 
 </body>
