@@ -25,7 +25,7 @@ class Event {
         $this->eventName = $inName;
     }
     function getEventName() {
-        return->$this->eventName;
+        return $this->eventName;
     }
     // processing methods
 }
