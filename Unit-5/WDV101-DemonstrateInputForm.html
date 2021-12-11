@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="stylesheet.css">
+<title>WDV101 Intro HTML and CSS</title>
+
+</head>
+
+<body>
+
+  <h1>WDV341 -  Intro PHP</h1>
+  <h2>UNIT-5 PHP Form Processing</h2>
+  <p>This is an example input form that will demonstrate how a form connects to a server side process.</p>
+
+  <div>
+    <form id="form1" name="form1" method="post" action="demonstrateFormHandler.php">
+
+      <div class="legend">
+        <legend>Example Form</legend>
+      </div>
+      
+      <div class="fields">
+        <p>
+          <label for="first_name">First Name:</label> 
+          <input type="text" name="first_name" id="first_name" />
+        </p>
+      </div>
+      
+      <div class="fields">
+        <p>
+          <label for="last_name">Last Name:</label> 
+          <input type="text" name="last_name" id="last_name" />
+        </p>
+      </div>
+      
+      <div class="fields">
+        <p>
+          <label for="school_name">School Name:</label> 
+          <input type="text" name="school_name" id="school_name" />
+        </p>
+      </div>
+      
+      <div class="fields">
+        <p>
+          <label for="customer_email">Student Email:</label>
+          <input type="email" name="customer_email" id="customer_email" placeholder="enteryouremail@mail.com" />
+        </p>
+      </div>
+  
+      <div class="fields">
+        <p>Please select your current academic standing:
+          <br><br>
+          <input type="radio" id="high_school" name="academic_standing" value="High School">
+          <label for="high_school">High School</label>
+          <br>
+          <input type="radio" id="freshman" name="academic_standing" value="Freshman">
+          <label for="freshman">Freshman</label>
+          <br>
+          <input type="radio" id="sophomore" name="academic_standing" value="Sophomore">
+          <label for="sophomore">Sophomore</label>
+          <br>
+        </p>
+      </div>
+  
+      <div>
+        <p>
+          <label for="student_major">Select your major:</label>
+          <select name="student_major" id="student_major">
+            <option value= ""> - Choose your major - </option>
+            <option value= "CIS">Computer Information Systems</option>
+            <option value= "GRD">Graphic Design</option>
+            <option value= "WDV">Web Development</option>
+          </select>
+        </p>
+      </div>
+  
+      <div class="fields">
+        <p>Check one or both to initiate communication:
+          <br><br>
+          <input type="checkbox" name="contact1" value="value1">
+          <label for="contact1">Please contact me with program information</label>
+          <br><br>
+        
+          <input type="checkbox" name="contact2" value="value2">
+          <label for="contact2">I would like a program advisor to contact me</label>
+        </p>
+      </div>
+        
+      <div class="fields">
+        <p>
+          <label for="comment">Please leave any comments in the box below.</label>
+          <textarea rows="7" cols="67" name="comment">
+          </textarea>
+        </p>
+      </div>
+      
+      <div>
+        <h3>
+          <input type="submit" name="button" id="button" value="Submit" />
+          <input type="reset" name="button2" id="button2" value="Reset" />
+        </h3>
+      </div>
+      
+    </form>
+  </div>
+
+</body>
+</html>

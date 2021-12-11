@@ -1,0 +1,75 @@
+form {
+  width: 800px;
+  margin: auto;
+  background-color: lightblue;
+  padding-left: 20px;
+}
+
+// form legend {
+//   font-size: larger;
+//   text-align: center;
+// }
+
+body {
+  background: url(images/contactBckGrnd.png);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.legend {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: xx-large;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 16px;
+}
+
+h1 {
+  background-color: darkgray;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  border-style: groove;
+  text-transform: uppercase;
+}
+
+h2 {
+  color: darkgray;
+  background-color: black;
+  padding: 20px;
+  border-style: groove;
+  margin: 20px;
+  text-align: center;
+}
+
+h3 {
+  background-color: black;
+  float: center;
+  margin: 20px;
+  padding: 20px;
+  font-weight: bold;
+  border-style: groove;
+}
+
+h4 {
+  float: center;
+  margin: 20px;
+  padding: 10px;
+  font-weight: bold;
+}
+
+p {
+  border-style: groove;
+  background-color: rgb(255, 255, 255);
+  margin: 20px;
+  padding: 20px;
+  font-weight: bold;
+}
+
+form {
+  border-radius: 50px;
+}
+
+.fields {
+  border-radius: 50px;
+}
