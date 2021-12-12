@@ -19,7 +19,7 @@
 
     */
 
-    include '../Unit-6/lesson 3/dbConnect.php';
+    include '../dbConnect.php';
 
     try{
         $sql = "SELECT product_name,product_description,product_price,product_image,product_status,product_inStock FROM wdv341_products;";
@@ -80,7 +80,7 @@
 
         <div class="productBlock">
             <div class="productImage">
-                <image src="productImages/<?php echo $result['product_image']; ?>">
+                <image src="productImages/monitor.jpg">
             </div>
             <p class="productName"><?php echo $result['product_name']; ?></p>
             <p class="productDesc"><?php echo $result['product_description'];?></p>

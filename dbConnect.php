@@ -15,7 +15,7 @@ try {
 	echo "Connected Successfully";
 
 }
-catch(PDO_EXCEPTION $e) {
+catch(PDOException $e) {
 	echo "Connection failed: " . $e->getMessage();	//$e.getMessage()
 
 	//object dot notation	$e.getMessage()

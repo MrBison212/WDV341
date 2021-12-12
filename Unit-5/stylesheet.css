@@ -19,6 +19,33 @@ body {
   padding-bottom: 16px;
 }
 
+h1 {
+  background-color: darkgray;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  border-style: groove;
+  text-transform: uppercase;
+}
+
+h2 {
+  color: darkgray;
+  background-color: black;
+  padding: 20px;
+  border-style: groove;
+  margin: 20px;
+  text-align: center;
+}
+
+h3 {
+  background-color: black;
+  float: center;
+  margin: 20px;
+  padding: 20px;
+  font-weight: bold;
+  border-style: groove;
+}
+
 h4 {
   float: center;
   margin: 20px;
