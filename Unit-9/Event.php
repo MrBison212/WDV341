@@ -12,6 +12,9 @@ class Event {
     public $eventId;        //camelCase in programs;    underscores in databases
     public $eventName;
     public $eventDescription;    
+    public $eventPresenter;    
+    public $eventDate;    
+    public $eventTime;    
 
     // constructor methods - skip
     // setters/getters
@@ -31,10 +34,31 @@ class Event {
     }
 
     function setEventDescription($inDescription) {
-        $this->eventDesc = $inDescription;
+        $this->eventDescription = $inDescription;
     }
     function getEventDescription() {
         return $this->eventDescription;
+    }
+
+    function setEventPresenter($inPresenter) {
+        $this->eventPresenter = $inPresenter;
+    }
+    function getEventPresenter() {
+        return $this->eventPresenter;
+    }
+
+    function setEventDate($inDate) {
+        $this->eventDate = $inDate;
+    }
+    function getEventDate() {
+        return $this->eventDate;
+    }
+
+    function setEventTime($inTime) {
+        $this->eventTime = $inTime;
+    }
+    function getEventTime() {
+        return $this->eventTime;
     }
     // processing methods
 }

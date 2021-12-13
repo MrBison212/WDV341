@@ -22,7 +22,7 @@ echo "<h2>"."PHP-JSON Event Object"."</h2>";
 
     try {
 
-        $sql = "SELECT events_id, events_name, events_description FROM wdv341_events";
+        $sql = "SELECT events_id, events_name, events_description, events_presenter, events_date, events_time FROM wdv341_events";
         $stmt = $conn->prepare($sql);                         //prepare the statement
         $stmt->execute();                                     //the result Object is still in database format
 
@@ -33,6 +33,9 @@ echo "<h2>"."PHP-JSON Event Object"."</h2>";
             $eventObject->setEventId( $row['events_id'] );
             $eventObject->setEventName( $row['events_name'] );
             $eventObject->setEventDescription( $row['events_description'] );
+            $eventObject->setEventPresenter( $row['events_presenter'] );
+            $eventObject->setEventDate( $row['events_date'] );
+            $eventObject->setEventTime( $row['events_time'] );
 
             array_push($outputObj ,$eventObject);
         }
