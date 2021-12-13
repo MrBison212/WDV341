@@ -14,6 +14,8 @@
             var myObj = JSON.parse(this.responseText);
             document.getElementById("displayProduct").innerHTML =
               myObj.productName;
+            console.log("Javascript formatted object");
+            console.log(myObj);
           }
         };
         // xmlhttp.open("GET", "deliverProduct.php", true);

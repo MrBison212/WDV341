@@ -19,7 +19,7 @@
 
     */
 
-    $productArray = [];     //create array to store products
+    $productArray = [];         //create array to store products
 
     include '../dbConnect.php';
 
@@ -31,47 +31,49 @@
         
         $result = $stmt->fetch(PDO::FETCH_ASSOC); //$result is an ARRAY
 
-        $productObj = new stdClass();           //creates generic PHP object
-        $productObj->product_name = $result['product_name'];        //add property to object
+        $productObj = new stdClass();               //creates generic PHP object
+        $productObj->product_name = $result['product_name'];    //add property to the object
         $productObj->product_description = $result['product_description'];
         $productObj->product_price = $result['product_price'];
-        $productObj->product_image = $result['product_image'];
-        $productObj->product_status = $result['product_status'];
+        $productObj->product_imge = $result['product_image'];
+        $productObj->product_stat = $result['product_status'];
         $productObj->product_inStock = $result['product_inStock'];
 
         //echo $productObj->product_name;
 
-        //$productObj = json_encode($productObj);       //convert PHP object into JSON object
+        // $productJSON = json_encode($productObj);        //convert PHP object into JSON object
 
-        //echo $productJSON;
+        // echo $productJSON;
 
         array_push($productArray,$productObj);      //add first product to array
 
-
-        foreach ($stmt->fetch(PDO::FETCH_ASSOC) as $result) {
-            $productObj = new stdClass();           //creates generic PHP object
-            $productObj->product_name = $result['product_name'];        //add property to object
+        foreach($stmt->fetchAll(PDO::FETCH_ASSOC) as $result){
+            $productObj->product_name = $result['product_name'];    //add property to the object
             $productObj->product_description = $result['product_description'];
             $productObj->product_price = $result['product_price'];
-            $productObj->product_image = $result['product_image'];
-            $productObj->product_status = $result['product_status'];
+            $productObj->product_imge = $result['product_image'];
+            $productObj->product_stat = $result['product_status'];
             $productObj->product_inStock = $result['product_inStock'];
 
-            array_push($productArray,$productObj);      //add first product to array
-        }
+            //$productJSON = json_encode($productObj);        //convert PHP object into JSON object
 
-        //echo $productArray;       Produced an error
+            //echo $productJSON;
+
+            array_push($productArray,$productObj);      //add first product to array
+
+        }      //end of forEach row on the database result
+
+        // echo $productArray;      Produced an error
 
         $productArrayJSON = json_encode($productArray);
 
-        echo $productArrayJSON;         //return JSON formatted array of objects
-
+        echo $productArrayJSON;             //return JSON formmatter array of objects          
     }
     catch(PDOException $e){
         echo "Errors: " . $e->getMessage();
     }
 
-
+    
 
 
 ?>

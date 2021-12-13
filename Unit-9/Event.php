@@ -1,6 +1,7 @@
 <?php
 
-// The Event class used to describe the properties and methods available to the events from the wdv341 events table
+// The Event class used to describe the properties and methods available to the events 
+// from the wdv341 events table
 
 
 class Event {
@@ -8,17 +9,18 @@ class Event {
     // commments
     // properties
 
-    public $eventId;
+    public $eventId;        //camelCase in programs;    underscores in databases
     public $eventName;
     public $eventDescription;    
-    // constructor methods
+
+    // constructor methods - skip
     // setters/getters
 
     function setEventId($inId) {
         $this->eventId = $inId;
     }
     function getEventId() {
-        return->$this->eventId;
+        return $this->eventId;
     }
 
     function setEventName($inName) {
@@ -26,6 +28,13 @@ class Event {
     }
     function getEventName() {
         return $this->eventName;
+    }
+
+    function setEventDescription($inDescription) {
+        $this->eventDesc = $inDescription;
+    }
+    function getEventDescription() {
+        return $this->eventDescription;
     }
     // processing methods
 }
