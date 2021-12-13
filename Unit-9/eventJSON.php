@@ -12,11 +12,11 @@
     Make an array of event, return the array...
 */
 echo "<h1>"."WDV341 Intro PHP"."</h1>";
-echo "<h2>"."Formatting JSON Output"."</h2>";
+echo "<h2>"."PHP-JSON Event Object"."</h2>";
 
     require 'Event.php';
 
-    $eventsArray = [];      //empty array to hold the event objects
+    $outputObj  = [];      //empty array to hold the event objects
 
     require '../dbConnect.php';
 
@@ -34,10 +34,10 @@ echo "<h2>"."Formatting JSON Output"."</h2>";
             $eventObject->setEventName( $row['events_name'] );
             $eventObject->setEventDescription( $row['events_description'] );
 
-            array_push($eventsArray,$eventObject);
+            array_push($outputObj ,$eventObject);
         }
 
-        echo json_encode($eventsArray);
+        echo json_encode($outputObj );
         
 
         //-foreach row in the $stmt, load the object
