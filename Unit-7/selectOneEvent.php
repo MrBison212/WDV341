@@ -4,18 +4,11 @@ include "../dbConnect.php";
 
 try {
 
-	$sql ="SELECT * FROM wdv341_events WHERE events_id=2";
-    $stmt = $conn->prepare($sql);                               //prepare the statement
-    $stmt->execute();                                           //the result Object is still in database format
+	$sql = "SELECT * FROM wdv341_events WHERE events_id=2";
+  $stmt = $conn->prepare($sql);                         //prepare the statement
+  $stmt->execute();                                     //the result Object is still in database format
 
-    foreach ( $stmt->fetchAll(PDO::FETCH_ASSOC) as $row) {
-        echo "<p>";
-        echo $row["events_id"];
-        echo "<br>";
-        echo $row["events_name"];
-        echo "<br>";
-        echo $row["events_date"];
-    }
+  $rowData = $stmt->fetchAll(PDO::FETCH_ASSOC); 
 
 }
 
@@ -29,46 +22,62 @@ catch(PDOException $e) {
 
 
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-<h1>All Events from the Events Table</h1>
+  <html>
+    <head>
+      <meta charset="utf-8" />
+      <meta name="description" content="example of meta" />
+      <meta name="viewpoint" content="width=device=width, initial-scale=1.0" />
+      <title>WDV321 Intro Javascript</title>
 
-<table>
-<?php
-	
-    foreach($stmt->fetchAll(PDO::FETCH_ASSOC) as $result) {
+      <style>
+        body {
+          background: #c8ccff;
+        }
+        table {
+          display: grid;
+          grid-template-columns: auto;
+          max-width: 600px;
+          padding: 10px;
+          background-color: #720404;
+        }
 
-        echo "<p>";
-        echo $row['event_id'];
-        echo "<br>";
-        echo $row['event_id'];
-        echo "<br>";
-        echo $row['event_id'];
-        echo "<br>";
+        table tr {
+          margin: 5px;
+          background: #b04949;
+          padding: 5px;
+        }
+      </style>
+    </head>
+
+    <body>
+      <h1>All Events for the Events Table</h1>
+
+      <table>
+          <tr>
+              <th>Events Id</th>
+              <th>Event Name</th>
+              <th>Description</th>
+          </tr>
+              
+          <?php
+
+          foreach ($rowData as $oneEvent) {
+
+              echo "<tr>";
+
+              echo "<td>".$oneEvent["events_id"]."</td>";
+              echo "<td>".$oneEvent["events_name"]."</td>";
+              echo "<td>".$oneEvent["events_description"]."</td>";
+
+              echo "</tr>";
+
+          }
 
 
-		// echo "<tr>";
-		// echo "<td>" . $row['event_id'] . "</td>";
-		// echo "<td>" . $row['event_name'] . "</td>";	
-		// echo "<td>" . $row['event_description'] . "</td>";
-		// echo "<td>" . $row['event_date'] . "</td>";
-		// echo "<td>" . $row['event_time'] . "</td>";
-		// echo "<td class='button'><a href='eventUpdate.php?eventID=" . $row['event_id'] . "'>Update</a></td>";
-		// echo "<td class='button'><a href='deleteEvent.php?eventID=" . $row['event_id'] . "'>Delete</a></td>"; 		
-		// echo "</tr>";
+          ?>
 
-    }
-?>
+        </table>
 
+    </body>
 
-
-</table>
-    
-</body>
-</html>
+  </html>

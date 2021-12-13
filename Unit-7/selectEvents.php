@@ -4,18 +4,11 @@ include "../dbConnect.php";
 
 try {
 
-	$sql ="SELECT * FROM wdv341_events";
-    $stmt = $conn->prepare($sql);                               //prepare the statement
-    $stmt->execute();                                           //the result Object is still in database format
+	$sql = "SELECT * FROM wdv341_events";
+  $stmt = $conn->prepare($sql);                         //prepare the statement
+  $stmt->execute();                                     //the result Object is still in database format
 
-    foreach ( $stmt->fetchAll(PDO::FETCH_ASSOC) as $row) {
-        echo "<p>";
-        echo $row["events_id"];
-        echo "<br>";
-        echo $row["events_name"];
-        echo "<br>";
-        echo $row["events_date"];
-    }
+  $rowData = $stmt->fetchAll(PDO::FETCH_ASSOC); 
 
 }
 
@@ -25,6 +18,8 @@ catch(PDOException $e) {
 
 
 ?>
+
+
 
 <!DOCTYPE html>
   <html>
@@ -38,16 +33,16 @@ catch(PDOException $e) {
         body {
           background: #c8ccff;
         }
-        .table {
+        table {
           display: grid;
-          grid-template-columns: 1fr 1fr 60%;
+          grid-template-columns: auto;
           max-width: 600px;
           padding: 10px;
           background-color: #720404;
         }
 
-        .table div {
-          margin: 2px;
+        table tr {
+          margin: 5px;
           background: #b04949;
           padding: 5px;
         }
@@ -57,52 +52,32 @@ catch(PDOException $e) {
     <body>
       <h1>All Events for the Events Table</h1>
 
-      <div class="table">
-        <div>Intro PHP - WDV341</div>
-        <div>1</div>
-        <div>An introduction into to the server-side language known as PHP.</div>
-      </div>
+        <table>
+          <tr>
+              <th>Events Id</th>
+              <th>Event Name</th>
+              <th>Description</th>
+          </tr>
+              
+          <?php
 
-      <div class="table">
-        <div>WDV321 - Adv. JavaScript</div>
-        <div>2</div>
-        <div>Adv. JavaScript discussion - inClass.</div>
-      </div>
+          foreach ($rowData as $oneEvent) {
 
-      <div class="table">
-        <div>Advance JavaScript</div>
-        <div>4</div>
-        <div>Homework</div>
-      </div>
+              echo "<tr>";
 
-      <div class="table">
-        <div>final test</div>
-        <div>6</div>
-        <div>final test</div>
-      </div>
+              echo "<td>".$oneEvent["events_id"]."</td>";
+              echo "<td>".$oneEvent["events_name"]."</td>";
+              echo "<td>".$oneEvent["events_description"]."</td>";
 
-      <div class="table">
-        <div>final test</div>
-        <div>7</div>
-        <div>final test</div>
-      </div>
+              echo "</tr>";
 
-      <div class="table">
-        <div>make sure this works</div>
-        <div>8</div>
-        <div>working</div>
-      </div>
+          }
 
-      <div class="table">
-        <div>test</div>
-        <div>9</div>
-        <div>test</div>
-      </div>
 
-      <div class="table">
-        <div>inclass test</div>
-        <div>10</div>
-        <div>inclass test</div>
-      </div>
+          ?>
+
+        </table>
+
     </body>
+
   </html>
