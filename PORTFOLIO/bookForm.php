@@ -214,6 +214,15 @@ else
             <input type="submit" id="submitForm" name="submitForm" value="Submit"></input>
           </form>
         </main>
+
+        <footer style="width: auto; height: 100px; background-color: rgb(56, 56, 56); color: white; text-align: center; padding-top: 2%;" >
+      <p>Copyright &copy; 
+        <script>document.write(new Date().getFullYear())</script> | Create by 
+        <em>
+          Jude Bissoon
+        </em>
+       </p>
+      </footer>
   </body>
 </html>
 <?php
