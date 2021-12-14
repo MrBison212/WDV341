@@ -254,38 +254,11 @@ else
               <label for="bookRating">Book Rating:</label><br>
               <td class="error"><?php echo "$ratingErrMsg"; ?></td><br>
               <fieldset class="bookRating">
-                <?php
-                  if($book_rating == "5 stars") { ?>
-                    <input type="radio" id="star5" name="bookRating" value="5 stars" checked /><label for="star5" title="Rocks!">5 stars</label>
-                    <input type="radio" id="star4" name="bookRating" value="4 stars" /><label for="star4" title="Pretty good">4 stars</label>
-                    <input type="radio" id="star3" name="bookRating" value="3 stars" /><label for="star3" title="Meh">3 stars</label>
-                    <input type="radio" id="star2" name="bookRating" value="2 stars" /><label for="star2" title="Kinda bad">2 stars</label>
-                    <input type="radio" id="star1" name="bookRating" value="1 stars" /><label for="star1" title="Sucks big time">1 star</label>
-                <?php } else if($book_rating == "4 stars") { ?>
-                  <input type="radio" id="star5" name="bookRating" value="5 stars" /><label for="star5" title="Rocks!">5 stars</label>
-                  <input type="radio" id="star4" name="bookRating" value="4 stars" checked /><label for="star4" title="Pretty good">4 stars</label>
-                  <input type="radio" id="star3" name="bookRating" value="3 stars" /><label for="star3" title="Meh">3 stars</label>
-                  <input type="radio" id="star2" name="bookRating" value="2 stars" /><label for="star2" title="Kinda bad">2 stars</label>
-                  <input type="radio" id="star1" name="bookRating" value="1 stars" /><label for="star1" title="Sucks big time">1 star</label>
-                <?php } else if($book_rating == "3 stars") { ?>
-                  <input type="radio" id="star5" name="bookRating" value="5 stars" /><label for="star5" title="Rocks!">5 stars</label>
-                  <input type="radio" id="star4" name="bookRating" value="4 stars" /><label for="star4" title="Pretty good">4 stars</label>
-                  <input type="radio" id="star3" name="bookRating" value="3 stars" checked /><label for="star3" title="Meh">3 stars</label>
-                  <input type="radio" id="star2" name="bookRating" value="2 stars" /><label for="star2" title="Kinda bad">2 stars</label>
-                  <input type="radio" id="star1" name="bookRating" value="1 stars" /><label for="star1" title="Sucks big time">1 star</label>
-                <?php } else if($book_rating == "2 stars") { ?>
-                  <input type="radio" id="star5" name="bookRating" value="5 stars" /><label for="star5" title="Rocks!">5 stars</label>
-                  <input type="radio" id="star4" name="bookRating" value="4 stars" /><label for="star4" title="Pretty good">4 stars</label>
-                  <input type="radio" id="star3" name="bookRating" value="3 stars" /><label for="star3" title="Meh">3 stars</label>
-                  <input type="radio" id="star2" name="bookRating" value="2 stars" checked /><label for="star2" title="Kinda bad">2 stars</label>
-                  <input type="radio" id="star1" name="bookRating" value="1 stars" /><label for="star1" title="Sucks big time">1 star</label>
-                <?php } else if($book_rating == "1 stars") { ?>
-                  <input type="radio" id="star5" name="bookRating" value="5 stars" /><label for="star5" title="Rocks!">5 stars</label>
-                  <input type="radio" id="star4" name="bookRating" value="4 stars" /><label for="star4" title="Pretty good">4 stars</label>
-                  <input type="radio" id="star3" name="bookRating" value="3 stars" /><label for="star3" title="Meh">3 stars</label>
-                  <input type="radio" id="star2" name="bookRating" value="2 stars" /><label for="star2" title="Kinda bad">2 stars</label>
-                  <input type="radio" id="star1" name="bookRating" value="1 stars" checked /><label for="star1" title="Sucks big time">1 star</label>
-                <?php } ?>
+                <input type="radio" id="star5" name="movieRating" value="5 stars" /><label for="star5" title="Rocks!">5 stars</label>
+                  <input type="radio" id="star4" name="movieRating" value="4 stars" checked /><label for="star4" title="Pretty good">4 stars</label>
+                  <input type="radio" id="star3" name="movieRating" value="3 stars" /><label for="star3" title="Meh">3 stars</label>
+                  <input type="radio" id="star2" name="movieRating" value="2 stars" /><label for="star2" title="Kinda bad">2 stars</label>
+                  <input type="radio" id="star1" name="movieRating" value="1 stars" /><label for="star1" title="Sucks big time">1 star</label>
               </fieldset><br><br><br><br>
             </div>
 
@@ -294,7 +267,7 @@ else
             <input type="submit" id="submitForm" name="submitForm" value="Submit"></input>
           </form>
         </main>
-
+        
         <footer style="width: auto; height: 100px; background-color: rgb(56, 56, 56); color: white; text-align: center; padding-top: 2%;" >
       <p>Copyright &copy; 
         <script>document.write(new Date().getFullYear())</script> | Created by 
