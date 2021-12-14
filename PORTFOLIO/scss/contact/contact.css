@@ -1,0 +1,138 @@
+body {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#045e01), to(#011300));
+  background-image: linear-gradient(to bottom right, #045e01, #011300);
+}
+
+header {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#045e01), to(#011300));
+  background-image: linear-gradient(to top right, #045e01, #011300);
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-size: 150%;
+  text-align: center;
+  padding-bottom: 0.5%;
+  padding-top: 0.5%;
+  font-size: 110%;
+}
+
+header h1 {
+  font-size: 300%;
+}
+
+header img {
+  width: 3%;
+  vertical-align: middle;
+}
+
+.msg {
+  background-color: #011300;
+  color: white;
+  -o-border-image: linear-gradient(to right, #045e01, #010c00);
+     border-image: -webkit-gradient(linear, left top, right top, from(#045e01), to(#010c00));
+     border-image: linear-gradient(to right, #045e01, #010c00);
+  line-height: 50px;
+  font-size: 250%;
+}
+
+.navbar {
+  padding-left: 0%;
+  padding-right: 30%;
+}
+
+.nav-item {
+  margin-left: 2%;
+  width: 320px;
+}
+
+.navbar-toggler {
+  margin-left: 3%;
+}
+
+nav a:hover {
+  background-color: #045e01;
+  border-radius: 10px 10px 0px 0px;
+  border: 1px solid black;
+  color: white;
+}
+
+form {
+  background-color: #b7ffa1;
+  text-align: center;
+  border: thick solid black;
+  width: 50%;
+  padding: 1%;
+  margin-left: 23.5%;
+  margin-right: 23.5%;
+  background-size: 105%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  border-radius: 20px;
+}
+
+form h1 {
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-family: "comic_zine_otregular";
+  font-size: 350%;
+}
+
+.fill {
+  background-color: #045e01;
+  width: 50%;
+  margin-right: 25%;
+  margin-left: 25%;
+  padding: 1%;
+  color: white;
+  border-radius: 30px;
+  border: thick solid black;
+}
+
+@media only screen and (max-width: 1440px) {
+  textarea {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 1180px) {
+  .nav-item {
+    margin-left: 1%;
+    width: 200px;
+  }
+  .fill {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 930px) {
+  .nav-item {
+    margin-left: 1%;
+    width: 170px;
+  }
+  .msg {
+    font-size: 150%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .navbar-nav {
+    margin-left: 50%;
+  }
+  form {
+    width: 95%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .navbar-nav {
+    margin-left: 30%;
+  }
+  header img {
+    width: 7%;
+    vertical-align: middle;
+  }
+}
+/*# sourceMappingURL=contact.css.map */

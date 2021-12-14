@@ -1,0 +1,172 @@
+// SCSS for PORTFOLIO
+$darkGreen: rgb(4, 94, 1);
+body {
+  background-image: linear-gradient(to bottom right, $darkGreen, rgb(1, 19, 0));
+}
+
+header {
+  background-image: linear-gradient(to top right, $darkGreen, rgb(1, 19, 0));
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-size: 150%;
+  text-align: center;
+  padding-bottom: 0.5%;
+  padding-top: 0.5%;
+  font-size: 110%;
+  height: 200px;
+}
+
+header h1 {
+  font-size: 300%;
+}
+
+header img {
+  width: 3%;
+  vertical-align: middle;
+}
+
+main h1 {
+  font-size: 250%;
+}
+
+.msg {
+  background-color: rgb(1, 19, 0);
+  color: white;
+  border-image: linear-gradient(to right, $darkGreen, rgb(1, 12, 0));
+  line-height: 50px;
+  font-size: 250%;
+}
+
+.navbar {
+  padding-left: 0%;
+  padding-right: 30%;
+}
+
+.nav-item {
+  margin-left: 2%;
+  width: 320px;
+}
+
+.navbar-toggler {
+  margin-left: 3%;
+}
+
+nav a:hover {
+  background-color: $darkGreen;
+  border-radius: 10px 10px 0px 0px;
+  border: 1px solid black;
+  color: white;
+}
+
+main {
+  text-align: center;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 1%;
+  padding-top: 5%;
+  padding-bottom: 20%;
+  background-image: url(../images/cinema.jpg);
+  background-size: 165%;
+  color: white;
+  border: 30px solid black;
+  text-shadow: 2px 2px 5px black;
+}
+
+main div {
+  width: 100%;
+  padding-left: 25%;
+  padding-right: 25%;
+  font-size: 160%;
+  background-color: transparent;
+}
+
+@media only screen and (max-width: 1400px) {
+  .nav-item {
+    margin-left: 1%;
+    width: 250px;
+  }
+
+  main {
+    text-align: center;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 1%;
+    padding-top: 5%;
+    padding-bottom: 20%;
+    background-image: url(../images/cinema.jpg);
+    background-size: 100%;
+    color: white;
+    border: 20px solid black;
+    text-shadow: 2px 2px 5px black;
+  }
+
+  main div {
+    width: 100%;
+    padding-left: 0%;
+    padding-right: 0%;
+    padding: 1%;
+    font-size: 160%;
+    background-color: transparent;
+  }
+}
+
+@media only screen and (max-width: 1180px) {
+  .nav-item {
+    margin-left: 1%;
+    width: 200px;
+  }
+}
+
+@media only screen and (max-width: 930px) {
+  .nav-item {
+    margin-left: 1%;
+    width: 170px;
+  }
+
+  .msg {
+    font-size: 150%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .navbar-nav {
+    margin-left: 50%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .navbar-nav {
+    margin-left: 30%;
+  }
+
+  main {
+    text-align: center;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 1%;
+    padding-top: 5%;
+    padding-bottom: 20%;
+    background-image: url(../images/cinema.jpg);
+    background-size: 300%;
+    color: white;
+    border: 20px solid black;
+    text-shadow: 2px 2px 5px black;
+  }
+
+  main div {
+    width: 100%;
+    padding-left: 0%;
+    padding-right: 0%;
+    padding: 1%;
+    font-size: 160%;
+    background-color: transparent;
+  }
+
+  header img {
+    width: 7%;
+    vertical-align: middle;
+  }
+}

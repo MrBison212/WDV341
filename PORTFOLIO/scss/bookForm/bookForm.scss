@@ -1,0 +1,247 @@
+$darkGreen: rgb(4, 94, 1);
+body {
+  background-image: linear-gradient(to bottom right, $darkGreen, rgb(1, 19, 0));
+}
+
+header {
+  background-image: linear-gradient(to top right, $darkGreen, rgb(1, 19, 0));
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-size: 150%;
+  text-align: center;
+  padding-bottom: 0.5%;
+  padding-top: 0.5%;
+  font-family: "alpha_echoregular";
+  font-size: 110%;
+  height: 200px;
+}
+
+header h1 {
+  font-size: 300%;
+}
+
+header img {
+  width: 3%;
+  vertical-align: middle;
+}
+
+.msg {
+  background-color: rgb(1, 19, 0);
+  color: white;
+  border-image: linear-gradient(to right, $darkGreen, rgb(1, 12, 0));
+  line-height: 50px;
+  font-size: 250%;
+}
+
+.navbar {
+  padding-left: 0%;
+  padding-right: 30%;
+}
+
+.nav-item {
+  margin-left: 2%;
+  width: 320px;
+}
+
+.navbar-toggler {
+  margin-left: 3%;
+}
+
+nav a:hover {
+  background-color: $darkGreen;
+  border-radius: 10px 10px 0px 0px;
+  border: 1px solid black;
+  color: white;
+}
+
+form {
+  background-size: 400px;
+  background-color: #b7ffa1;
+  text-align: center;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 50px;
+  padding: 2%;
+  width: 38%;
+  border-radius: 50px;
+  border: thick solid black;
+  color: white;
+  font-size: 120%;
+}
+
+form h1 {
+  font-family: "comic_zine_otregular";
+  font-size: 350%;
+  text-shadow: -1px 0 $darkGreen, 0 1px $darkGreen 1px 0 $darkGreen,
+    0 -1px $darkGreen;
+}
+
+.message {
+  text-align: center;
+  background-color: white;
+}
+
+.fill {
+  background-color: $darkGreen;
+  margin-bottom: 4%;
+  width: 100%;
+  padding: 1%;
+}
+
+.rate {
+  background-color: $darkGreen;
+  margin-bottom: 4%;
+  width: 100%;
+  padding: 1%;
+}
+
+.bookRating {
+  float: left;
+  margin-left: 35%;
+}
+
+.bookBlock {
+  border: 5px solid rgb(0, 48, 0);
+  background-color: rgb(44, 105, 44);
+  width: 50%;
+  padding: 40px;
+}
+
+.h1,
+.bookTitle,
+.bookDescription,
+.bookAuthor,
+.bookRating {
+  color: rgb(255, 255, 255);
+}
+
+/* :not(:checked) is a filter, so that browsers that don’t support :checked don’t
+   follow these rules. Every browser that supports :checked also supports :not(), so
+   it doesn’t make the test unnecessarily selective */
+.bookRating:not(:checked) > input {
+  position: absolute;
+  top: -9999px;
+  clip: rect(0, 0, 0, 0);
+}
+
+.bookRating:not(:checked) > label {
+  float: right;
+  width: 1em;
+  padding: 0 0.1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 200%;
+  line-height: 1.2;
+  color: #ddd;
+  text-shadow: 1px 1px #bbb, 2px 2px #666, 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
+}
+
+.bookRating:not(:checked) > label:before {
+  content: "★ ";
+}
+
+.bookRating > input:checked ~ label {
+  color: #f70;
+  text-shadow: 1px 1px #c60, 2px 2px #940, 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
+}
+
+.bookRating:not(:checked) > label:hover,
+.bookRating:not(:checked) > label:hover ~ label {
+  color: gold;
+  text-shadow: 1px 1px goldenrod, 2px 2px #b57340,
+    0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
+}
+
+.bookRating > input:checked + label:hover,
+.bookRating > input:checked + label:hover ~ label,
+.bookRating > input:checked ~ label:hover,
+.bookRating > input:checked ~ label:hover ~ label,
+.bookRating > label:hover ~ input:checked ~ label {
+  color: #ea0;
+  text-shadow: 1px 1px goldenrod, 2px 2px #b57340,
+    0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
+}
+
+.bookRating > label:active {
+  position: relative;
+  top: 2px;
+  left: 2px;
+}
+
+@media only screen and (max-width: 1400px) {
+  .nav-item {
+    margin-left: 1%;
+    width: 250px;
+  }
+}
+
+@media only screen and (max-width: 1180px) {
+  .nav-item {
+    margin-left: 1%;
+    width: 200px;
+  }
+  textarea {
+    width: 80%;
+  }
+
+  .bookRating {
+    margin-left: 20%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  form {
+    width: 95%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+  }
+
+  .bookRating {
+    margin-left: 37%;
+  }
+}
+
+@media only screen and (max-width: 930px) {
+  .nav-item {
+    margin-left: 1%;
+    width: 170px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .navbar-nav {
+    margin-left: 50%;
+  }
+
+  .bookRating {
+    margin-left: 35%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .navbar-nav {
+    margin-left: 30%;
+  }
+
+  header img {
+    width: 7%;
+    vertical-align: middle;
+  }
+
+  .bookRating {
+    margin-left: 27%;
+  }
+
+  form h1.fill {
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    width: 95%;
+  }
+}
+
+@media only screen and (max-width: 415px) {
+  .bookRating {
+    margin-left: 20%;
+  }
+}

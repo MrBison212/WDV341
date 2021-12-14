@@ -1,0 +1,108 @@
+body {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#045e01), to(#011300));
+  background-image: linear-gradient(to bottom right, #045e01, #011300);
+}
+
+header {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#045e01), to(#011300));
+  background-image: linear-gradient(to top right, #045e01, #011300);
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-size: 150%;
+  text-align: center;
+  padding-bottom: 0.5%;
+  padding-top: 0.5%;
+  font-size: 110%;
+}
+
+header h1 {
+  font-size: 300%;
+}
+
+header img {
+  width: 3%;
+  vertical-align: middle;
+}
+
+.msg {
+  background-color: #011300;
+  color: white;
+  -o-border-image: linear-gradient(to right, #045e01, #010c00);
+     border-image: -webkit-gradient(linear, left top, right top, from(#045e01), to(#010c00));
+     border-image: linear-gradient(to right, #045e01, #010c00);
+  line-height: 50px;
+  font-size: 250%;
+}
+
+.navbar {
+  padding-left: 0%;
+  padding-right: 30%;
+}
+
+.nav-item {
+  margin-left: 2%;
+  width: 320px;
+}
+
+.navbar-toggler {
+  margin-left: 3%;
+}
+
+nav a:hover {
+  background-color: #045e01;
+  border-radius: 10px 10px 0px 0px;
+  border: 1px solid black;
+  color: white;
+}
+
+#container {
+  width: 75%;
+  margin: 2% 10%;
+  border: 2px solid black;
+  text-align: center;
+  background-size: 100%;
+  padding: 25px;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+@media only screen and (max-width: 1400px) {
+  .nav-item {
+    margin-left: 1%;
+    width: 250px;
+  }
+}
+
+@media only screen and (max-width: 1180px) {
+  .nav-item {
+    margin-left: 1%;
+    width: 200px;
+  }
+}
+
+@media only screen and (max-width: 930px) {
+  .nav-item {
+    margin-left: 1%;
+    width: 170px;
+  }
+  .msg {
+    font-size: 150%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .navbar-nav {
+    margin-left: 50%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .navbar-nav {
+    margin-left: 30%;
+  }
+  header img {
+    width: 7%;
+    vertical-align: middle;
+  }
+}
+/*# sourceMappingURL=delete.css.map */

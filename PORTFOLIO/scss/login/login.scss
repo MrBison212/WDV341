@@ -1,0 +1,46 @@
+// SCSS for PORTFOLIO
+$darkGreen: rgb(4, 94, 1);
+body {
+  background-image: linear-gradient(to top right, $darkGreen, rgb(1, 19, 0));
+}
+
+#container {
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 5%;
+  border: 2px solid black;
+  text-align: center;
+  background-size: 50%;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+h2 {
+  font-family: "alpha_echoregular";
+}
+
+p {
+  font-weight: bold;
+}
+
+input[type="text"] {
+  background-color: #ffffcc;
+}
+
+input[type="password"] {
+  background-color: #ffffcc;
+}
+
+@media only screen and (max-width: 776px) {
+  h1 {
+    font-size: 120%;
+  }
+
+  #container {
+    width: 99%;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    margin-top: 15%;
+  }
+}

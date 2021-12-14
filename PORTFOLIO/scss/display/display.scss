@@ -1,0 +1,145 @@
+$darkGreen: rgb(4, 94, 1);
+body {
+  background-image: linear-gradient(to bottom right, $darkGreen, rgb(1, 19, 0));
+}
+
+header {
+  background-image: linear-gradient(to top right, $darkGreen, rgb(1, 19, 0));
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-size: 150%;
+  text-align: center;
+  padding-bottom: 0.5%;
+  padding-top: 0.5%;
+  font-family: "alpha_echoregular";
+  font-size: 110%;
+  height: 200px;
+}
+
+header h1 {
+  font-size: 300%;
+}
+
+header img {
+  width: 3%;
+  vertical-align: middle;
+}
+
+.msg {
+  background-image: linear-gradient(to right, $darkGreen, rgb(1, 19, 0));
+  color: white;
+  border-image: linear-gradient(to right, $darkGreen, rgb(1, 12, 0));
+  line-height: 50px;
+  font-size: 250%;
+}
+
+.navbar {
+  padding-left: 0%;
+  padding-right: 30%;
+}
+
+.nav-item {
+  margin-left: 2%;
+  width: 320px;
+}
+
+.navbar-toggler {
+  margin-left: 3%;
+}
+
+nav a:hover {
+  background-color: $darkGreen;
+  border-radius: 10px 10px 0px 0px;
+  border: 1px solid black;
+  color: white;
+}
+
+.bookBlock {
+  width: 55%;
+  border: 1px solid black;
+  background-color: #303030;
+  color: white;
+  padding: 1%;
+  font-size: 120%;
+}
+
+#container {
+  width: 75%;
+  margin-right: 12.5%;
+  margin-left: 12.5%;
+  border: 2px solid black;
+  text-align: center;
+  background-color: white;
+  background-image: url(../images/popcorn.jpg);
+}
+
+#container h1 {
+  font-family: "comic_zine_otregular";
+  font-size: 350%;
+}
+
+center h1 {
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+@media only screen and (max-width: 1400px) {
+  .nav-item {
+    margin-left: 1%;
+    width: 250px;
+  }
+
+  .bookBlock {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 1180px) {
+  .nav-item {
+    margin-left: 1%;
+    width: 200px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+}
+
+@media only screen and (max-width: 930px) {
+  .nav-item {
+    margin-left: 1%;
+    width: 170px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .navbar-nav {
+    margin-left: 50%;
+  }
+
+  #container {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    background-size: 100%;
+  }
+
+  .bookBlock {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .navbar-nav {
+    margin-left: 30%;
+  }
+
+  header img {
+    width: 7%;
+    vertical-align: middle;
+  }
+}
+
+@media only screen and (max-width: 415px) {
+}
