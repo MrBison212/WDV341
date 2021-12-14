@@ -3,7 +3,7 @@
 //set up session
 session_start();
 
-$_SESSION['validUser']= "no";
+isset($_SESSION['validUser']) == "no";
 
 	//if the page was reached by a submitted login form...
 	if(isset($_POST["submit"])) {
@@ -61,7 +61,7 @@ $_SESSION['validUser']= "no";
 
 <?php
 //if the user is a valid user...
-if($_SESSION['validUser'] == "yes")
+if(isset($_SESSION['validUser']) == "yes")
 {
 	header('location: index.php');
 }

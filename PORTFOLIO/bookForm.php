@@ -1,6 +1,6 @@
 <?php
 session_start();
-if($_SESSION['validUser'] == "yes") {
+if($_SESSION['validUser']  == "yes") {
 $msg = "Welcome back " . $_SESSION['inUsername'] . "!" ;
 $titleErrMsg = "";
 $descriptionErrMsg = "";

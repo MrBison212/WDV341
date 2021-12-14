@@ -1,6 +1,6 @@
 <?php
 session_start();
-if($_SESSION['validUser'] == "yes") {
+if(isset($_SESSION['validUser']) == "yes") {
   $msg = "Welcome back " . $_SESSION['inUsername'] . "!" ;
 } else {
   $msg = "";
@@ -127,7 +127,7 @@ else {
           <li class="nav-item"><a class="nav-link" href="bookForm.php">Add a Book</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
           <?php
-          if($_SESSION['validUser'] == "yes") {
+          if(isset($_SESSION['validUser']) == "yes") {
           ?>
           <li class="nav-item"><a class="nav-link" href='logout.php'>Logout</a></li>
         <?php } else {
