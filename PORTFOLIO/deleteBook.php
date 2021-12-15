@@ -74,7 +74,7 @@ else
 		</div>
 	</main>
 
-	<footer style="width: auto; height: 100px; background-color: rgb(56, 56, 56); color: white; text-align: center; padding-top: 2%;" >
+	<footer style="width: auto; height: 100px; background-color: rgb(56, 56, 56); color: white; text-align: center; padding-top: 2%; bottom: 0px;" >
       <p>Copyright &copy; 
         <script>document.write(new Date().getFullYear())</script> | Created by 
         <em>

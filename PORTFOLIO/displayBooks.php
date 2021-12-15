@@ -115,8 +115,8 @@ else {
 							if(isset($_SESSION['validUser']) == "yes") {
 							?>
 	              <?php $book_id=$row['book_id'];	//put book_id into a variable for further processing  ?>
-	              <a href='updatebook.php?id=<?php echo $book_id; ?>'><button>Update</button></a>
-	              <a href='deletebook.php?id=<?php echo $book_id; ?>'><input type="button" value="Delete"></a>
+	              <a href='updateBook.php?id=<?php echo $book_id; ?>'><button>Update</button></a>
+	              <a href='deleteBook.php?id=<?php echo $book_id; ?>'><input type="button" value="Delete"></a>
 							<?php }
 							else {
 
