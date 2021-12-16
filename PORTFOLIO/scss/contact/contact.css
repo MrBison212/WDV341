@@ -133,5 +133,14 @@ form h1 {
     width: 7%;
     vertical-align: middle;
   }
+  .books {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .books {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=contact.css.map */

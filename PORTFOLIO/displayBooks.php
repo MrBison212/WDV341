@@ -96,7 +96,7 @@ else {
 	<div id="container">
 	<center>
 
-				<div class = "books">
+				<div id = "books">
 	        <?php
 					while($row=$stmt->fetch()) {
 					?>
