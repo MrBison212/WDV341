@@ -1,0 +1,59 @@
+// SCSS file for contactInputForm.html for Murphy Cemetery
+@import url(mainStyle.css);
+
+$darkGreen: #2d412d;
+$tan: #878175;
+
+.formContainer {
+  border-radius: 10px;
+  background-color: $darkGreen;
+  color: $tan;
+  padding: 5% 5%;
+  margin: 5% 25%;
+  margin-top: 10px;
+  width: 50%;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  margin-top: 10px;
+  height: 40px;
+  width: 80px;
+  border-radius: 19px;
+  border: 2px solid $tan;
+}
+
+.text-white {
+  margin-top: 60px;
+}
+
+@media only screen and (max-width: 750px) {
+  .text-white {
+    margin-top: 110px;
+  }
+  .formContainer {
+    border-radius: 15px;
+    padding: 5% 5%;
+    margin: 5% 1%;
+    margin-top: 50px;
+    width: 98%;
+  }
+  .button {
+    padding-left: 25%;
+
+    input[type="submit"],
+    input[type="reset"] {
+      border-radius: 15px;
+    }
+  }
+}
